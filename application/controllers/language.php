@@ -196,6 +196,7 @@ class Language extends CI_Controller{
 				if(empty($keys)||!is_array($keys)){
 					$keys=FALSE;
 				}
+				$new_keys = array();
 				foreach($_POST as $key=>$value){ /// create new array
 					if($keys!==FALSE&&in_array($key,$keys)){
 						if($this->input->post('comment_'.$key)){
